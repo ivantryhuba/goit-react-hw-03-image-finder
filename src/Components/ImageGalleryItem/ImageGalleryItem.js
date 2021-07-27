@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {
+    ImageGalleryItemStyled,
+    ImageGalleryStyled,
+} from './ImageGalleryItem.styles';
 export const ImageGalleryItem = ({
     imageUrl,
     tags,
@@ -8,13 +12,13 @@ export const ImageGalleryItem = ({
     openModal,
 }) => {
     return (
-        <li>
-            <img
+        <ImageGalleryItemStyled>
+            <ImageGalleryStyled
                 src={imageUrl}
                 alt={tags}
                 onClick={() => openModal(largeImageURL)}
             />
-        </li>
+        </ImageGalleryItemStyled>
     );
 };
 
